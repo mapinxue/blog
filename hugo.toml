@@ -1,8 +1,29 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://creampnx-x.github.io/blog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+title = 'Blog'
+theme = 'PaperMod'
+enableEmoji = true
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+
+enableRobotsTXT=true
+buildDrafts=false
+buildFuture=false
+buildExpired=false
+
+[params]
+  [params.homeInfoParams]
+    Title = "马致良的文章"
+    Content = " 👋 后面，这里将会有一些文章 "
+
+  [params.assets]
+    disableHLJS = true
+    favicon = "/blog/favicon.ico?v=1.0"
+
+  [[params.socialIcons]]
+      name = "github"
+      title = "View Source on Github"
+      url = "https://github.com/creampnx-x/blog" 
