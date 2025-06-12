@@ -36,12 +36,6 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-> 提纲
->
-> - 多节点连接   
-> - 服务器上启动推理   
-> - 可能遇到的问题   
-   
    
 ## 多个节点连接组成集群   
 如果你试图部署满血版 Deepseek R1 或者任何参数量大于 64 \* 8 = 512B 的大语言模型，那么必须使用多个服务器通过高速网络连接纳管到一起使用。 

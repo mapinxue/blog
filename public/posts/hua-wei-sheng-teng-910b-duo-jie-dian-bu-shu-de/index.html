@@ -58,50 +58,9 @@
 </noscript>
 </head>
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
+<body class="" id="top"><style>
 
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/blog/" accesskey="h" title="Blog (Alt + H)">Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
+</style><main class="main">
 
 <article class="post-single">
   <header class="post-header">
@@ -112,7 +71,7 @@
     <div class="post-description">
       由于中国多次经历芯片被限制性销售的“卡脖子”的困境，所以AI大模型推理/训练的芯片也被加在国产化备忘录中。此文章尽可能的详细，读者可以选择性的阅读。  
     </div>
-    <div class="post-meta"><span title='2025-06-12 08:00:00 +0000 +0000'>June 12, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;70 words&nbsp;·&nbsp;马致良&nbsp;|&nbsp;<a href="https://github.com//mapinxue/blog/content/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de.md" rel="noopener noreferrer edit" target="_blank">建议修改</a>
+    <div class="post-meta"><span title='2025-06-12 08:00:00 +0000 +0000'>June 12, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;66 words&nbsp;·&nbsp;马致良&nbsp;|&nbsp;<a href="https://github.com//mapinxue/blog/content/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de.md" rel="noopener noreferrer edit" target="_blank">建议修改</a>
 
 </div>
   </header> <div class="toc">
@@ -130,14 +89,7 @@
     </details>
 </div>
 
-  <div class="post-content"><blockquote>
-<p>提纲</p>
-<ul>
-<li>多节点连接</li>
-<li>服务器上启动推理</li>
-<li>可能遇到的问题</li>
-</ul></blockquote>
-<h2 id="多个节点连接组成集群">多个节点连接组成集群<a hidden class="anchor" aria-hidden="true" href="#多个节点连接组成集群">#</a></h2>
+  <div class="post-content"><h2 id="多个节点连接组成集群">多个节点连接组成集群<a hidden class="anchor" aria-hidden="true" href="#多个节点连接组成集群">#</a></h2>
 <p>如果你试图部署满血版 Deepseek R1 或者任何参数量大于 64 * 8 = 512B 的大语言模型，那么必须使用多个服务器通过高速网络连接纳管到一起使用。</p>
 <p>模型以及其需要的资源：</p>
 <ul>
