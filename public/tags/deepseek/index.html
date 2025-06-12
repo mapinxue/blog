@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head>
-	<meta name="generator" content="Hugo 0.147.8"><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Blog</title>
-
+<title>Deepseek | Blog</title>
+<meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blog/">
+<link rel="canonical" href="http://localhost:1313/blog/tags/deepseek/">
 <link crossorigin="anonymous" href="/blog/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/blog/favicon.ico?v=1.0">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
@@ -19,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/tags/deepseek/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/tags/deepseek/">
 <noscript>
     <style>
         #theme-toggle,
@@ -104,59 +103,29 @@
     </nav>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>马致良的文章</h1>
-    </header>
-    <div class="entry-content">
-        👋 后面，这里将会有一些文章
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
-    <a href="https://github.com/creampnx-x/blog" target="_blank" rel="noopener noreferrer me"
-        title="View Source on Github">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-    </path>
-</svg>
-    </a>
-</div>
+<header class="page-header">
+  <h1>
+    Deepseek
+  </h1>
+</header>
 
-    </footer>
-</article>
-
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">华为昇腾 910B 多节点部署 Deepseek R1 指北
     </h2>
   </header>
   <div class="entry-content">
-    <p> 提纲
+    <p>华为昇腾 910B 多节点部署 Deepseek R1 指北 由于中国多次经历芯片被限制性销售的“卡脖子”的困境，所以AI大模型推理/训练的芯片也被加在国产化备忘录中。此文章尽可能的详细，读者可以选择性的阅读。
+提纲
 多节点连接 服务器上启动推理 可能遇到的问题 多个节点连接组成集群 如果你试图部署满血版 Deepseek R1 或者任何参数量大于 64 * 8 = 512B 的大语言模型，那么必须使用多个服务器通过高速网络连接纳管到一起使用。
 模型以及其需要的资源：
 DeepSeek R1 671b 满血版：由于910B 只支持 BF16 和 INT8(w8a8)，所以对于真正的满血版（BF16）需要 671 * 2 = 1342，再加上性能损耗所以最少需要4台Atlas 800。 下载地址：https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-0528 Deepseek R1 671b 满血版 Int8 量化: 其需要至少两台 Atlas 800(16 * 64GB) 。 下载链接：https://www.modelscope.cn/models/TensorLake/DeepSeek-R1-0528-W8A8 一般小于 450B 的模型均可用单台服务器部署推理。 很多情况下，如果我们只是做个Demo演示，那么可以使用家用/机房的 2.5G/10Gbps 交换机来组成集群，但是这种情况下搭建的集群同步速度非常缓慢，部署的模型推理速度远低于一般自然人的文字输出速度，所以基本没法用。如果要私有化部署大模型用来生产的话，必须有1台超过200Ge的交换机做 Peer-Link。
 实际上，当你有实体华为昇腾服务器的时候，可以看到服务器背板的下侧有 8*（100Ge光纤*2），这些光口就是用来连接高速交换机的。交换机需要一些配置和调试才能使用，交换机的配置和调试工作一般是专业的交付人员做的，这里做罗列的提示：
-配置 VLAN 配置 Roce：指 RDMA 参数面网络，具体内容不清楚。 Wiki：https://en.wikipedia.org/wiki/RDMA_over_Converged_Ethernet 这样交换机的配置就结束了，下面就是到服务器侧。
-服务器的互相连通性配置有以下步骤：
-使用 hccn_tool 交换机上配置的VLAN 为每个NPU设置 ip。 使用 hccn_tool 测试联通性。 </p>
+配置 VLAN 配置 Roce：指 RDMA 参数面网络，具体内容不清楚。 Wiki：https://en.wikipedia.org/wiki/RDMA_over_Converged_Ethernet 这样交换机的配置就结束了，下面就是到服务器侧。 服务器的互相连通性配置有以下步骤：
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-12 08:00:00 +0000 +0000'>June 12, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;70 words&nbsp;·&nbsp;马致良</footer>
+  <footer class="entry-footer"><span title='2025-06-12 08:00:00 +0000 +0000'>June 12, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;77 words&nbsp;·&nbsp;Me</footer>
   <a class="entry-link" aria-label="post link to 华为昇腾 910B 多节点部署 Deepseek R1 指北" href="http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Blog 0-1
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>我的第一个 Blog
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-09-15 11:30:03 +0000 +0000'>September 15, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;2 words&nbsp;·&nbsp;Me</footer>
-  <a class="entry-link" aria-label="post link to Blog 0-1" href="http://localhost:1313/blog/posts/page/"></a>
 </article>
     </main>
     

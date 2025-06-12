@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blog</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content on Blog</description>
+    <title>推理 on Blog</title>
+    <link>http://localhost:1313/blog/tags/%E6%8E%A8%E7%90%86/</link>
+    <description>Recent content in 推理 on Blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jun 2025 08:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/%E6%8E%A8%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>华为昇腾 910B 多节点部署 Deepseek R1 指北</title>
       <link>http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/</link>
       <pubDate>Thu, 12 Jun 2025 08:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/</guid>
-      <description>由于中国多次经历芯片被限制性销售的“卡脖子”的困境，所以AI大模型推理/训练的芯片也被加在国产化备忘录中。此文章尽可能的详细，读者可以选择性的阅读。  </description>
-    </item>
-    <item>
-      <title>Blog 0-1</title>
-      <link>http://localhost:1313/blog/posts/page/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/page/</guid>
       <description>Desc Text.</description>
     </item>
   </channel>
