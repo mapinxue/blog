@@ -59,50 +59,11 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+<body class="list" id="top"><style>
+    body {
+        font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
     }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/blog/" accesskey="h" title="Blog (Alt + H)">Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
+</style><main class="main"> 
 <header class="page-header">
   <h1>
     推理
@@ -115,16 +76,15 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>华为昇腾 910B 多节点部署 Deepseek R1 指北 由于中国多次经历芯片被限制性销售的“卡脖子”的困境，所以AI大模型推理/训练的芯片也被加在国产化备忘录中。此文章尽可能的详细，读者可以选择性的阅读。
-提纲
-多节点连接 服务器上启动推理 可能遇到的问题 多个节点连接组成集群 如果你试图部署满血版 Deepseek R1 或者任何参数量大于 64 * 8 = 512B 的大语言模型，那么必须使用多个服务器通过高速网络连接纳管到一起使用。
+    <p>多个节点连接组成集群 如果你试图部署满血版 Deepseek R1 或者任何参数量大于 64 * 8 = 512B 的大语言模型，那么必须使用多个服务器通过高速网络连接纳管到一起使用。
 模型以及其需要的资源：
 DeepSeek R1 671b 满血版：由于910B 只支持 BF16 和 INT8(w8a8)，所以对于真正的满血版（BF16）需要 671 * 2 = 1342，再加上性能损耗所以最少需要4台Atlas 800。 下载地址：https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-0528 Deepseek R1 671b 满血版 Int8 量化: 其需要至少两台 Atlas 800(16 * 64GB) 。 下载链接：https://www.modelscope.cn/models/TensorLake/DeepSeek-R1-0528-W8A8 一般小于 450B 的模型均可用单台服务器部署推理。 很多情况下，如果我们只是做个Demo演示，那么可以使用家用/机房的 2.5G/10Gbps 交换机来组成集群，但是这种情况下搭建的集群同步速度非常缓慢，部署的模型推理速度远低于一般自然人的文字输出速度，所以基本没法用。如果要私有化部署大模型用来生产的话，必须有1台超过200Ge的交换机做 Peer-Link。
 实际上，当你有实体华为昇腾服务器的时候，可以看到服务器背板的下侧有 8*（100Ge光纤*2），这些光口就是用来连接高速交换机的。交换机需要一些配置和调试才能使用，交换机的配置和调试工作一般是专业的交付人员做的，这里做罗列的提示：
-配置 VLAN 配置 Roce：指 RDMA 参数面网络，具体内容不清楚。 Wiki：https://en.wikipedia.org/wiki/RDMA_over_Converged_Ethernet 这样交换机的配置就结束了，下面就是到服务器侧。 服务器的互相连通性配置有以下步骤：
-...</p>
+配置 VLAN 配置 Roce：指 RDMA 参数面网络，具体内容不清楚。 Wiki：https://en.wikipedia.org/wiki/RDMA_over_Converged_Ethernet 这样交换机的配置就结束了，下面就是到服务器侧。
+服务器的互相连通性配置有以下步骤：
+使用 hccn_tool 交换机上配置的VLAN 为每个NPU设置 ip。 使用 hccn_tool 测试联通性。 </p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-12 08:00:00 +0000 +0000'>June 12, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;77 words&nbsp;·&nbsp;Me</footer>
+  <footer class="entry-footer"><span title='2025-06-12 08:00:00 +0000 +0000'>June 12, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;66 words&nbsp;·&nbsp;马致良</footer>
   <a class="entry-link" aria-label="post link to 华为昇腾 910B 多节点部署 Deepseek R1 指北" href="http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/"></a>
 </article>
     </main>

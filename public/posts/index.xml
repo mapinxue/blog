@@ -6,21 +6,21 @@
     <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jun 2025 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS 样式设置备忘录（持续更新）</title>
+      <link>http://localhost:1313/blog/posts/css-yang-shi-she-zhi-bei-wang-lu-chi-xu-geng-xin/</link>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/css-yang-shi-she-zhi-bei-wang-lu-chi-xu-geng-xin/</guid>
+      <description>这里将会存放一些用户界面优化的 CSS 样式</description>
+    </item>
     <item>
       <title>华为昇腾 910B 多节点部署 Deepseek R1 指北</title>
       <link>http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/</link>
       <pubDate>Thu, 12 Jun 2025 08:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/</guid>
       <description>由于中国多次经历芯片被限制性销售的“卡脖子”的困境，所以AI大模型推理/训练的芯片也被加在国产化备忘录中。此文章尽可能的详细，读者可以选择性的阅读。  </description>
-    </item>
-    <item>
-      <title>Blog 0-1</title>
-      <link>http://localhost:1313/blog/posts/page/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/page/</guid>
-      <description>Desc Text.</description>
     </item>
   </channel>
 </rss>

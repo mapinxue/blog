@@ -17,7 +17,10 @@ buildExpired=false
 [params]
   [params.homeInfoParams]
     Title = "马致良的文章"
-    Content = " 👋 后面，这里将会有一些文章 "
+    Content = """
+     👋 后面，这里将会有一些文章 
+        - 联系我：mapinxue@qq.com
+     """
 
   [params.assets]
     disableHLJS = true

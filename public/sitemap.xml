@@ -3,21 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2025-06-13T10:13:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/page/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>http://localhost:1313/blog/my-new-page/</loc>
+    <lastmod>2025-06-13T10:13:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/first/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>http://localhost:1313/blog/tags/910b/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/atlas800/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/deepseek/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/posts/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/anytype.20250612.202629.71/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/</loc>
+    <loc>http://localhost:1313/blog/posts/hua-wei-sheng-teng-910b-duo-jie-dian-bu-shu-de/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/%E5%A4%9A%E8%8A%82%E7%82%B9/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/%E6%8E%A8%E7%90%86/</loc>
+    <lastmod>2025-06-12T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/categories/</loc>
   </url>
