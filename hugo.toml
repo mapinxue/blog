@@ -1,6 +1,6 @@
 baseURL = 'https://creampnx-x.github.io/blog/'
 languageCode = 'en-us'
-title = 'Blog'
+title = '马致良的blog'
 theme = 'PaperMod'
 enableEmoji = true
 
